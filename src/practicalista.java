@@ -30,7 +30,7 @@ public class practicalista {
             System.exit(-1);
         }
 
-        //Usar para leer linea x linea el archivo
+        //leer linea x linea el archivo
         BufferedReader inputFile = new BufferedReader(FR);
 
         String lectorlinea = null;
@@ -46,7 +46,6 @@ public class practicalista {
         // Lista con todas las palabras diferentes
         ArrayList<String> list = new ArrayList<String>();
 
-        // Tiempo inicial
         try {
             while ((lectorlinea = inputFile.readLine()) != null) {
                 lineCount++;
@@ -73,7 +72,7 @@ public class practicalista {
                         isNumeric = false;
                     }
 
-                    // Si el token es un numero, pasar al siguiente
+                    // SKIPEAR los numeros
                     if (isNumeric) {
                         numberCount++;
                         continue;
